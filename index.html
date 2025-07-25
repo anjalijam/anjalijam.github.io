@@ -1,1 +1,685 @@
-Hello World my name is anjali
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Phuong - Content Writer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: #e67e22;
+            background: rgba(230, 126, 34, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 120px 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: #e67e22;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #e67e22, #f39c12);
+            border-radius: 2px;
+        }
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .home-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .home-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .flower-icon {
+            font-size: 3rem;
+            color: #f39c12;
+            margin: 1rem 0;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contact-pills {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .pill:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        #about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #e67e22, #f39c12);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-text h3 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .highlight {
+            color: #e67e22;
+            font-weight: 600;
+        }
+
+        /* Education & Work Section */
+        #education-work {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, #e67e22, #f39c12);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #e67e22;
+            border: 4px solid white;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: white;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 4px solid #e67e22;
+        }
+
+        .timeline-content h3 {
+            color: #e67e22;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .year {
+            color: #f39c12;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content .role {
+            color: #333;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(230, 126, 34, 0.1);
+            color: #e67e22;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* My Work Section */
+        #my-work {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .work-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #fff, #f1c40f);
+        }
+
+        .work-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .work-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .work-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-item p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .home-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 22px;
+            }
+
+            .right {
+                left: 0%;
+            }
+
+            .contact-pills {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#education-work" class="nav-link">Education & Work</a></li>
+            <li><a href="#my-work" class="nav-link">My Work</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <div class="flower-icon">🌸</div>
+            <h1 class="home-title">CREATIVE PORTFOLIO</h1>
+            <h2 class="home-subtitle">LE MAI PHUONG • SOCIAL MEDIA</h2>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">Content Writer | Social Media Specialist</p>
+            
+            <div class="contact-pills">
+                <div class="pill">📅 29/01/2000</div>
+                <div class="pill">📞 0377028675</div>
+                <div class="pill">📍 Ho Chi Minh City, VN</div>
+                <div class="pill">✉️ maiphuongxdn@gmail.com</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-content">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <span>MP</span>
+                </div>
+                <h3 style="color: #e67e22; margin-bottom: 1rem;">Mai Phuong</h3>
+                <p style="color: #666; font-style: italic;">"A little about me"</p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#" class="social-link" style="color: #e67e22;">📘</a>
+                    <a href="#" class="social-link" style="color: #e67e22;">📷</a>
+                    <a href="#" class="social-link" style="color: #e67e22;">💼</a>
+                    <a href="#" class="social-link" style="color: #e67e22;">▶️</a>
+                </div>
+            </div>
+            
+            <div class="about-text">
+                <h3>Hi, My name is Mai Phuong aka Scotty</h3>
+                <p>In the dynamic landscape of social media, my <span class="highlight">relentless curiosity</span> keeps me tuned into the newest digital trends.</p>
+                <br>
+                <p>Writing is what I do best. I enjoy using my creativity to help users have better social media experiences. But my passion for social media isn't just about managing, it's about <span class="highlight">innovating and crafting authentic, memorable strategy</span> to bridge brand with communities.</p>
+                <br>
+                <p>If there's any work you haven't seen here, it doesn't mean I don't know about it. I just haven't had a great opportunity to do it and to show it here perfectly. <span class="highlight">Let me do it!</span></p>
+                <br>
+                <p style="font-style: italic; color: #e67e22;">🌸 "When I write about something new, I have to forget the quotes I've written before..." ♪</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Work Section -->
+    <section id="education-work">
+        <h2 class="section-title">EDUCATION & EXPERIENCE</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="year">2023</span>
+                    <h3>DEMAD Agency - Content Writer</h3>
+                    <div class="role">Leader Content Marketing</div>
+                    <p>Responsible for content plans for 10+ clients monthly. Created and built multi-platform content (Facebook, Instagram, TikTok...)</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="year">2022</span>
+                    <h3>Lazada - Business Development</h3>
+                    <div class="role">BPO - Graduated Lazprentice</div>
+                    <p>Managed nearly 100 new sellers under FMCG; Supported and optimized store operations; Posted SEO-standard content, search optimization...</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="year">2021</span>
+                    <h3>DVA Agency - Content Writer</h3>
+                    <div class="role">Freelance - Content Writer</div>
+                    <p>Developed and executed social media content for clients</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="year">2020</span>
+                    <h3>S.O.C Institute - Sale & Marketing</h3>
+                    <div class="role">Leader Content Marketing</div>
+                    <p>Led content marketing initiatives and strategy development</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="year">2018-2022</span>
+                    <h3>Ho Chi Minh City University of Transport</h3>
+                    <div class="role">Bachelor's Degree</div>
+                    <div class="skills-list">
+                        <span class="skill-tag">📝 Content Marketing</span>
+                        <span class="skill-tag">📊 Digital Marketing Performance</span>
+                        <span class="skill-tag">👥 Social Media</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Work Section -->
+    <section id="my-work">
+        <h2 class="section-title" style="color: white;">MY WORK</h2>
+        <p style="text-align: center; font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">Writing & Planning</p>
+        
+        <div class="work-grid">
+            <div class="work-item">
+                <div class="work-icon">📱</div>
+                <h3>Social Post</h3>
+                <p>Creating engaging social media content that resonates with target audiences across various platforms including Facebook, Instagram, and LinkedIn.</p>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-icon">🎬</div>
+                <h3>Short Video (Reel, TikTok...)</h3>
+                <p>Developing creative short-form video content for TikTok, Instagram Reels, and other platforms to maximize engagement and reach.</p>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-icon">📢</div>
+                <h3>PR Content</h3>
+                <p>Crafting compelling PR content that builds brand awareness, manages reputation, and creates meaningful connections with audiences.</p>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-icon">🔍</div>
+                <h3>SEO Website Content</h3>
+                <p>Writing optimized website content that ranks well in search engines while providing value to readers and driving organic traffic.</p>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">💼</a>
+            <a href="#" class="social-link">▶️</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling and active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            
+            // Handle nav link clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Update active nav link on scroll
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe timeline items and work items
+            document.querySelectorAll('.timeline-item, .work-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
