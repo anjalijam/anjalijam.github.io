@@ -27,7 +27,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 2rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -47,7 +47,8 @@
             position: relative;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover,
+        nav a.active {
             color: #e67e22;
             background: rgba(230, 126, 34, 0.1);
             transform: translateY(-2px);
@@ -133,8 +134,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .contact-pills {
@@ -146,18 +154,18 @@
         }
 
         .pill {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
         }
 
         .pill:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         /* About Section */
@@ -176,7 +184,7 @@
             background: white;
             padding: 2rem;
             border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -287,7 +295,7 @@
             background: white;
             position: relative;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-left: 4px solid #e67e22;
         }
 
@@ -339,11 +347,11 @@
         }
 
         .work-item {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -361,8 +369,8 @@
 
         .work-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            background: rgba(255,255,255,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .work-icon {
@@ -380,7 +388,6 @@
             opacity: 0.9;
             line-height: 1.6;
         }
-
         /* Social Links */
         .social-links {
             display: flex;
@@ -392,7 +399,7 @@
         .social-link {
             width: 50px;
             height: 50px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -402,11 +409,11 @@
             text-decoration: none;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .social-link:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-3px) scale(1.1);
         }
 
@@ -451,7 +458,8 @@
                 border-color: transparent white transparent transparent;
             }
 
-            .left::after, .right::after {
+            .left::after,
+            .right::after {
                 left: 22px;
             }
 
@@ -466,6 +474,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav id="navbar">
@@ -477,6 +486,7 @@
         </ul>
     </nav>
 
+    
     <!-- Home Section -->
     <section id="home">
         <div class="home-content">
@@ -484,7 +494,7 @@
             <h1 class="home-title">CREATIVE PORTFOLIO</h1>
             <h2 class="home-subtitle">Anjali Jambhulkar</h2>
             <p style="font-size: 1.2rem; margin: 1rem 0;">Content Writer | Social Media Specialist</p>
-            
+
             <div class="contact-pills">
                 <div class="pill">💼 3 Years</div>
                 <div class="pill">📞 7709778004</div>
@@ -500,7 +510,8 @@
         <div class="about-content">
             <div class="profile-card">
                 <div class="profile-image">
-                    <img src="img/Profile.jpeg" alt="Anjali Jambhulkar Profile" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    <img src="img/Profile.jpeg" alt="Anjali Jambhulkar Profile"
+                        style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                 </div>
                 <h3 style="color: #e67e22; margin-bottom: 1rem;">Anjali Jambhulkar</h3>
                 <p style="color: #666; font-style: italic;">"A little about me"</p>
@@ -511,18 +522,85 @@
                     <a href="#" class="social-link" style="color: #e67e22;">▶️</a>
                 </div>
             </div>
-            
+
             <div class="about-text">
                 <h3>Hi, My name is Anjali Jambhulkar aka AJ</h3>
                 <p>Words are my thing, but <span class="highlight">strategy </span> is where I really shine.</p>
                 <br>
-                <p>I help brands stop blending in and start showing up, online, where it matters. With 3+ years of writing and social media experience, I’ve worked across industries like healthcare, tech, education, construction, and e-commerce. My work has ranged from writing website copy that feels like a conversation to building content calendars that actually get results.</p>
+                <p>I help brands stop blending in and start showing up, online, where it matters. With 3+ years of
+                    writing and social media experience, I've worked across industries like healthcare, tech, education,
+                    construction, and e-commerce. My work has ranged from writing website copy that feels like a
+                    conversation to building content calendars that actually get results.</p>
                 <br>
-                <p>I don’t just post for the sake of it. <span class="highlight">I plan, I track, I tweak.</span> I understand how audiences think, and I create content that makes them stop scrolling and start paying attention. </p>
+                <p>I don't just post for the sake of it. <span class="highlight">I plan, I track, I tweak.</span> I
+                    understand how audiences think, and I create content that makes them stop scrolling and start paying
+                    attention. </p>
                 <br>
-                <p style="font-style: italic; color: #e67e22;">🌸 And if there’s something you don’t see here? It’s not because I can’t do it. I just haven’t had the right brief to show it yet. Let me change that.</p>
+                <p style="font-style: italic; color: #e67e22;">🌸 And if there's something you don't see here? It's not
+                    because I can't do it. I just haven't had the right brief to show it yet. Let me change that.</p>
             </div>
         </div>
+    </section>
+
+      <!-- Updated My Work Section with clickable Social Media Strategy card -->
+    <section id="my-work">
+        <h2 class="section-title" style="color: white;">MY WORK</h2>
+        <p style="text-align: center; font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">What I Actually Do</p>
+
+        <div class="work-grid">
+            <!-- Clickable Social Media Strategy Card -->
+            <a href="social-media-strategy.html" style="text-decoration: none; color: inherit;">
+                <div class="work-item clickable-card">
+                    <div class="work-icon">📱</div>
+                    <h3>Social Media Strategy</h3>
+                    <p>I build monthly content calendars that don't just "fill the grid." I align them with brand goals,
+                        audience behavior, trends, and platform strengths. Each post has a reason to exist. I focus on
+                        consistency, tone, and intent, because that's what gets you seen (and remembered).</p>
+                    <div class="view-more">View Details →</div>
+                </div>
+            </a>
+
+            <div class="work-item">
+                <div class="work-icon">📝</div>
+                <h3>Content Writing (With Purpose)</h3>
+                <p>From taglines to long-form blogs, I write content that knows what it's doing. It sells without
+                    sounding pushy, informs without being boring, and always feels human.</p>
+            </div>
+
+            <div class="work-item">
+                <div class="work-icon">📢</div>
+                <h3>Campaign Planning</h3>
+                <p>Give me a product, a goal, or an idea, I'll turn it into a campaign with smart copy, visuals,
+                    formats, and timelines that speak your audience's language.</p>
+            </div>
+
+            <div class="work-item">
+                <div class="work-icon">🔍</div>
+                <h3>SEO Website Content</h3>
+                <p>Writing optimized website content that ranks well in search engines while providing value to readers
+                    and driving organic traffic.</p>
+            </div>
+
+            <div class="work-item">
+                <div class="work-icon">🎯</div>
+                <h3>Brand Voice Building</h3>
+                <p>Every brand has a voice; it just needs help finding it. I shape consistent, clear messaging that
+                    sounds like you across all platforms.</p>
+            </div>
+
+            <div class="work-item">
+                <div class="work-icon">🎬</div>
+                <h3>Video Scripts</h3>
+                <p>Short-form or long-form, explainer or emotional, I bring structure and storytelling to the screen,
+                    one line at a time.</p>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">💼</a>
+                <a href="#" class="social-link">▶️</a>
+            </div>
     </section>
 
     <!-- Education & Work Section -->
@@ -532,19 +610,21 @@
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <h3>Praxis360 - Content Writer</h3>
-                    <div class="role">(2024 – Present)</div>
+                    <div class="role">(2024 - Present)</div>
                     <ul>
-                        <li>Built monthly social calendars and wrote content for 15+ brands across healthcare, education & B2B</li>
+                        <li>Built monthly social calendars and wrote content for 15+ brands across healthcare, education
+                            & B2B</li>
                         <li>Wrote 20+ website pages in a week (still proud of that one)</li>
-                        <li>Helped create campaign themes, video scripts, newsletters and storyboards alongside design teams</li>
+                        <li>Helped create campaign themes, video scripts, newsletters and storyboards alongside design
+                            teams</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <h3>Realisieren Technologies - Content Writer</h3>
-                    <div class="role">(2023 – 2024)</div>
+                    <div class="role">(2023 - 2024)</div>
                     <ul>
                         <li>Boosted blog traffic by 30% with better content flow and SEO direction</li>
                         <li>Wrote weekly blog posts, social media captions, emailers, and web content</li>
@@ -552,11 +632,11 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="timeline-item left">
                 <div class="timeline-content">
-                   <h3>Zucol Group - Content Writer</h3>
-                    <div class="role">(2022 – 2023)</div>
+                    <h3>Zucol Group - Content Writer</h3>
+                    <div class="role">(2022 - 2023)</div>
                     <ul>
                         <li>Created SEO blogs and social posts for e-commerce, edtech, and SaaS brands</li>
                         <li>Collaborated with designers to make sure visuals and copy matched tone and intent</li>
@@ -564,7 +644,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <h3>M.Pharm, Pharmaceutics</h3>
@@ -572,90 +652,39 @@
                     <p>Sinhgad Institute of Pharmacy, Pune | CGPA: 8.5</p>
                 </div>
             </div>
-            
+
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <h3>B.Pharm</h3>
-                     <div class="role">2016-2020</div>
+                    <div class="role">2016-2020</div>
                     <p>Gurunanak College of Pharmacy, Nagpur | CGPA: 8.1</p>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- My Work Section -->
-    <section id="my-work">
-        <h2 class="section-title" style="color: white;">MY WORK</h2>
-        <p style="text-align: center; font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">What I Actually Do</p>
-        
-        <div class="work-grid">
-            <div class="work-item">
-                <div class="work-icon">📱</div>
-                <h3>Social Media Strategy </h3>
-                <p> I build monthly content calendars that don’t just “fill the grid.” I align them with brand goals, audience behavior, trends, and platform strengths. Each post has a reason to exist. I focus on consistency, tone, and intent, because that's what gets you seen (and remembered).</p>
-            </div>
-            
-            <div class="work-item">
-                <div class="work-icon">📝</div>
-                <h3>Content Writing (With Purpose)</h3>
-                <p> From taglines to long-form blogs, I write content that knows what it’s doing. It sells without sounding pushy, informs without being boring, and always feels human.</p>
-            </div>
-            
-            <div class="work-item">
-                <div class="work-icon">📢</div>
-                <h3>Campaign Planning</h3>
-                <p>Give me a product, a goal, or an idea, I’ll turn it into a campaign with smart copy, visuals, formats, and timelines that speak your audience’s language.</p>
-            </div>
-            
-            <div class="work-item">
-                <div class="work-icon">🔍</div>
-                <h3>SEO Website Content</h3>
-                <p>Writing optimized website content that ranks well in search engines while providing value to readers and driving organic traffic.</p>
-            </div>
-            
-        <div class="work-item">
-                <div class="work-icon">🎯</div>
-                <h3>Brand Voice Building</h3>
-                <p>Every brand has a voice; it just needs help finding it. I shape consistent, clear messaging that sounds like you across all platforms.</p>
-        </div>
-              
-        <div class="work-item">
-                <div class="work-icon">🎬</div>
-                <h3>Video Scripts</h3>
-                <p>Short-form or long-form, explainer or emotional, I bring structure and storytelling to the screen, one line at a time.</p>
-        </div>
-        
-
-        <div class="social-links">
-            <a href="#" class="social-link">📘</a>
-            <a href="#" class="social-link">📷</a>
-            <a href="#" class="social-link">💼</a>
-            <a href="#" class="social-link">▶️</a>
         </div>
     </section>
 
     <script>
         // Smooth scrolling and active nav link
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('section');
-            
+
             // Handle nav link clicks
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
-                    
+
                     targetSection.scrollIntoView({
                         behavior: 'smooth'
                     });
                 });
             });
-            
+
             // Update active nav link on scroll
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
@@ -664,7 +693,7 @@
                         current = section.getAttribute('id');
                     }
                 });
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
@@ -672,14 +701,14 @@
                     }
                 });
             });
-            
+
             // Add scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
-            const observer = new IntersectionObserver(function(entries) {
+
+            const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
@@ -687,7 +716,7 @@
                     }
                 });
             }, observerOptions);
-            
+
             // Observe timeline items and work items
             document.querySelectorAll('.timeline-item, .work-item').forEach(item => {
                 item.style.opacity = '0';
@@ -698,4 +727,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Strategy - My Work</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        min-height: 100vh;
+        color: white;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .back-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateX(-5px);
+      }
+
+      .page-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .page-icon {
+        font-size: 3.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .content-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .overview-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .skill-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .skill-item h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        color: #fff;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .process-step {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+      }
+
+      .step-number {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: linear-gradient(45deg, #fff, #f1c40f);
+        color: #333;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .media-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .media-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+      }
+
+      .media-placeholder {
+        background: rgba(255, 255, 255, 0.2);
+        height: 200px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+      }
+
+      .media-caption {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      .results-section {
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.05)
+        );
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin-top: 2rem;
+      }
+
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .result-metric {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .metric-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+
+      .metric-label {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .page-title {
+          font-size: 2rem;
+        }
+
+        .back-btn {
+          position: static;
+          margin-bottom: 2rem;
+          align-self: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-btn"> ← Back to Portfolio </a>
+
+      <div class="header">
+        <h1 class="page-title">
+          <span class="page-icon">📱</span>
+          Social Media Strategy
+        </h1>
+        <p class="subtitle">
+          Building strategic content calendars that align with brand goals,
+          audience behavior, and platform strengths
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">What I Do</h2>
+        <p class="overview-text">
+          I don't just fill content grids – I build strategic content
+          ecosystems. My approach combines data-driven insights with creative
+          storytelling to create social media strategies that drive real
+          business results. Every post has a purpose, every campaign has a goal,
+          and every strategy is tailored to your unique brand voice and audience
+          needs.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h4>📊 Strategic Planning</h4>
+            <p>
+              Monthly content calendars aligned with business objectives,
+              seasonal trends, and audience behavior patterns.
+            </p>
+          </div>
+          <div class="skill-item">
+            <h4>🎯 Platform Optimization</h4>
+            <p>
+              Tailored content strategies for Instagram, LinkedIn, Twitter,
+              TikTok, and emerging platforms.
+            </p>
+          </div>
+          <div class="skill-item">
+            <h4>📈 Performance Analytics</h4>
+            <p>
+              Data-driven insights and strategy adjustments based on engagement
+              metrics and conversion tracking.
+            </p>
+          </div>
+          <div class="skill-item">
+            <h4>🎨 Content Curation</h4>
+            <p>
+              Mix of original content, user-generated content, and trending
+              topics that maintain brand consistency.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">My Process</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h4>Brand & Audience Analysis</h4>
+            <p>
+              Deep dive into your brand values, target audience demographics,
+              competitor landscape, and current social presence.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h4>Platform Strategy Development</h4>
+            <p>
+              Create platform-specific strategies that leverage each channel's
+              unique strengths and audience behavior.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h4>Content Calendar Creation</h4>
+            <p>
+              Design comprehensive monthly calendars with post types, captions,
+              hashtags, and optimal posting times.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h4>Implementation & Optimization</h4>
+            <p>
+              Launch campaigns, monitor performance, and continuously optimize
+              based on real-time data and feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">Project Gallery</h2>
+        <p style="margin-bottom: 1.5rem; opacity: 0.9">
+          Here are some examples of my social media strategy work (Add your
+          actual project images and videos below):
+        </p>
+
+        <div class="media-gallery">
+          <div class="media-item">
+            <div class="media-placeholder">📊</div>
+            <p class="media-caption">
+              Content Calendar Template - Monthly planning dashboard with
+              engagement tracking
+            </p>
+          </div>
+          <div class="media-item">
+            <div class="media-placeholder">📱</div>
+            <p class="media-caption">
+              Instagram Strategy Case Study - 300% engagement increase in 3
+              months
+            </p>
+          </div>
+          <div class="media-item">
+            <div class="media-placeholder">🎥</div>
+            <p class="media-caption">
+              Video Content Strategy - Viral TikTok campaign reaching 2M+ views
+            </p>
+          </div>
+          <div class="media-item">
+            <div class="media-placeholder">📈</div>
+            <p class="media-caption">
+              Analytics Dashboard - Real-time performance tracking and insights
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-section">
+        <h2 class="section-title">Results I Deliver</h2>
+        <div class="results-grid">
+          <div class="result-metric">
+            <div class="metric-number">150%</div>
+            <div class="metric-label">Average Engagement Increase</div>
+          </div>
+          <div class="result-metric">
+            <div class="metric-number">2.5M+</div>
+            <div class="metric-label">Total Reach Generated</div>
+          </div>
+          <div class="result-metric">
+            <div class="metric-number">50+</div>
+            <div class="metric-label">Successful Campaigns</div>
+          </div>
+          <div class="result-metric">
+            <div class="metric-number">95%</div>
+            <div class="metric-label">Client Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">Ready to Transform Your Social Media?</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem">
+          Let's create a social media strategy that doesn't just post content –
+          it builds communities, drives engagement, and achieves your business
+          goals.
+        </p>
+        <div style="text-align: center">
+          <a
+            href="mailto:your-email@example.com"
+            style="
+              background: rgba(255, 255, 255, 0.2);
+              color: white;
+              padding: 1rem 2rem;
+              border-radius: 50px;
+              text-decoration: none;
+              font-weight: bold;
+              border: 1px solid rgba(255, 255, 255, 0.3);
+              transition: all 0.3s ease;
+            "
+          >
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
