@@ -262,7 +262,44 @@ Because when your content knows what it’s doing, your audience does too.
         <h2 class="section-title">Project Gallery</h2>
         <p style="margin-bottom: 1.5rem; opacity: 0.9">
           Here are some samples of my writing for your reference:        </p>
+ <!-- Click on me-->
+        <div class="drive-cta">
+          <a
+            class="drive-btn"
+            href="https://drive.google.com/drive/folders/1IkoZLI2uuHteDWY03p5hJiCud-JQmrM6"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Drive folder with work samples in a new tab"
+            >Open Full Work Samples (Google Drive) →</a
+          >
+        </div>
 
+        <style>
+          /* ...existing styles... */
+
+          .drive-cta {
+            text-align: center;
+            margin: 0.5rem 0 1.5rem;
+          }
+
+          .drive-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            padding: 0.6rem 1.1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.15s ease, background 0.15s ease;
+          }
+
+          .drive-btn:hover,
+          .drive-btn:focus {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.18);
+          }
+        </style>
         
 <style>
   /* ...existing styles... */
@@ -311,33 +348,31 @@ Because when your content knows what it’s doing, your audience does too.
 <div class="skills-grid">
   <div class="skill-item">
     <h4>📊 Website Content</h4>
-    <div class="thumb-grid">
-      <div class="thumb">
-        <a href="img/.png" target="_blank" rel="noopener">
-          <img src="img/Planner.png" alt="Social Media Planner">
-        </a>
-      </div>
-    </div>
+
+    <ul class="bullet-list">
+      <li>Clear, friendly, and on-brand copy</li>
+      <li>Explains what you do and why it matters</li>
+      <li>Optimized for readability and user experience</li>
+    </ul>
   </div>
 
   <div class="skill-item">
-    <h4>🎯 Platform Optimization</h4>
-    <div class="thumb-grid">
-      <div class="thumb">
-        <a href="img/Dr. Shruti Insta.png" target="_blank" rel="noopener">
-          <img src="img/Dr. Shruti Insta.png" alt="Dr. Shruti Instagram example">
-        </a>
-      </div>
-    </div>
+    <h4>🎯 Product Descriptions</h4>
+    <ul class="bullet-list">
+      <li>Turns technical products into simple, benefit-focused descriptions</li>
+      <li>Highlights key features that matter to your audience</li>
+      <li>SEO-friendly but human first</li>
+    </ul>
   </div>
 
   <div class="skill-item">
-    <h4>🎨 Content Curation</h4>
-    <div class="thumb-grid">
-      <div class="thumb">
-        <a href="img/Dr. Girhe insta.png" target="_blank" rel="noopener">
-          <img src="img/Dr. Girhe insta.png" alt="Dr. Girhe Instagram example">
-        </a>
+    <h4>Blogs & Articles</h4>
+   <ul class="bullet-list">
+      <li>Informative, engaging, and easy to read
+      <li>Simplifies complex topics without losing depth</li>
+      <li>Naturally integrates keywords for SEO</li>
+    </ul>
+  </div>
       </div>
     </div>
   </div>
